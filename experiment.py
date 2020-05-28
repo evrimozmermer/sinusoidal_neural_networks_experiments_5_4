@@ -187,7 +187,7 @@ for experiment in range(1,6,1):
         
         lossV = output - labels[cnt].unsqueeze(0)
         print("Epoch: {}, Sample: {}, Loss: {}".format(experiment,cnt,torch.max(torch.abs(lossV))))
-        print("Experiments:\n",experiment_dict)
+        print("Experiment {}:\n".format(experiment),"experiment_{}".format(experiment))
         if (cnt+1)%1000 == 0:
             experiment_dict["experiment_{}".format(experiment)].append(test(model, data_test, labels_test))
             
